@@ -65,7 +65,7 @@ public class GetImagesHandler implements Closeable {
 					.toString());
 			imageObj.put("status", image.getStatus());
 			imageObj.put("version", image.getVersion());
-			imageObj.put("uri", image.getUri().toString());
+			//imageObj.put("uri", image.getUri().toString());
 			imagesList.add(imageObj);
 		}
 
@@ -88,7 +88,7 @@ public class GetImagesHandler implements Closeable {
 			imageObj.put("operatingsystem", nodeMetadata.getOperatingSystem()
 					.toString());
 			imageObj.put("status", nodeMetadata.getStatus());
-			imageObj.put("uri", nodeMetadata.getUri().toString());
+			//imageObj.put("uri", nodeMetadata.getUri().toString());
 			serversList.add(imageObj);
 		}
 
@@ -112,7 +112,7 @@ public class GetImagesHandler implements Closeable {
 			imageObj.put("operatingsystem", nodeMetadata.getOperatingSystem()
 					.toString());
 			imageObj.put("status", nodeMetadata.getStatus());
-			imageObj.put("uri", nodeMetadata.getUri().toString());
+			//imageObj.put("uri", nodeMetadata.getUri().toString());
 			serversList.add(imageObj);
 		}
 

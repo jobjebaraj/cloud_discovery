@@ -15,11 +15,18 @@ public interface ServerManager {
 	
 	public Json publishServer();
 	
-	public Json ListImages();
 	
 	public JSONArray listServers();
 	
 	public JsonObject getServersByRam(int ram);
+	
+	public JSONArray ListImages();
+	
+	public JSONArray listServersByParentLocationId(String zone);
+	
+	public JSONArray listServersByNameStartsWith(String startString);
+
+
 	
 	public Json ListLoadBalancers();
 }
