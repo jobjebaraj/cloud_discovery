@@ -1,0 +1,37 @@
+<project name="cloud_discovery" default="jar" basedir=".">
+
+<property name="dir.src" value="src/main/java"/>
+<property name="dir.build" value="build"/>
+<property name="dir.dest" value="dest"/>
+
+<path id="class.path">
+  <fileset dir="lib">
+    <include name="**/*.jar" />
+  </fileset>
+</path>
+
+<target name="clean" description="Removing the all generated files.">
+<delete dir="${dir.build}"/>
+<delete dir="${dir.dest}"/>
+</target>
+
+<target name="prepare" depends="clean">
+<mkdir dir="${dir.build}"/>
+<mkdir dir="${dir.dest}"/>
+<mkdir dir="${dir.src}"/>
+</target>
+
+<target name="compile" depends="prepare">
+  <echo>  ==== Compiling Cloud Discovery Packages  ===</echo>
+
+
+  <javac debug="on" srcdir="${dir.src}" destdir="${dir.build}" >
+    <classpath refid="class.path" />
+  </javac>
+</target>
+
+<target name="jar" depends="compile">
+<jar jarfile="${dir.dest}/cloud_discovery.jar" basedir="${dir.build}"/>
+
+</target>
+</project>
