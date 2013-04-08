@@ -16,8 +16,8 @@ public class ServerManagerImpl implements ServerManager {
 	GetImagesHandler imagesHandler = new GetImagesHandler();
 	GetServersHandler serversHandler = new GetServersHandler();
 	GetLoadBalancersHandler loadBalancersHandler = new GetLoadBalancersHandler();
-	String username = "mchandran";
-	String apiKey = "6c84997c73856a67be0783e7e9ce96ce";
+	String username = "";
+	String apiKey = "";
 	
 	private ServerManagerImpl() {
 
